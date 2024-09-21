@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <link rel="stylesheet" href="timer.css">
+    <link rel="stylesheet" href="stopwatch.css">
+    <link rel="stylesheet" href="switch.css">
+    <link href="https://fonts.cdnfonts.com/css/amazon-ember" rel="stylesheet">
+    <title>Advance Clock</title>
+</head>
+
+<body>
+    <header class="header">
+        <button id="showClock">Clock</button>
+        <button id="showTimer">Timer</button>
+        <button id="showStopwatch">Stopwatch</button>
+    </header>
+
+    <div id="clockSection" class="section active">
+        <h1>CLOCK</h1>
+        <div class="container"> 
+            <div class="clockwrapper">
+                <div class="clock">
+                    <div class="clocktime"></div>
+                </div>
+                <div class="division1"></div>
+                <div class="alarmwrapper">
+                    <div class="alarm">
+                        <select id="alarmHour" class="selectMenu">
+                            <option value="" selected hidden>Hours</option>
+                        </select>
+    
+                        <select id="alarmMinute" class="selectMenu">
+                            <option value="" selected hidden>Minutes</option>
+                        </select>
+    
+                        <select id="alarmAmPm" class="selectMenu">
+                            <option value="" selected hidden>Am/Pm</option>
+                        </select>
+    
+                        <button id="setalarm">Set Alarm</button>
+                    </div>
+                </div>
+                <div class="division1"></div>
+                <div class="alarmTimeDisplay">
+                    <p id="alarmTimeDisplayHead"></p>
+                    <p id="displayAlarmTime"></p>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="timerSection" class="section">
+        <h1>TIMER</h1>
+        <div class="MainTimerContainer">
+            <div class="timerInputContainer">
+                <input type="number" id="minInput" class="timerMinInput" placeholder="Enter Minutes">
+                <input type="number" id="secInput" class="timerMinInput" placeholder="Enter Seconds">
+            </div>
+
+            <div class="timeCounterContainer"><div id="timecounter"></div></div>
+
+            <div class="timerbuttoncontainer">
+                <button id="start">START</button>
+                <button id="stop">STOP</button>
+                <button id="reset">RESET</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stopwatchSection" class="section">
+        <h1>STOPWATCH</h1>
+        <div class="MainstopwatchContainer">
+            <div class="timeContainer">
+                <div id="time"></div>
+            </div>
+
+            <div class="stopWatchButtonContainer">
+                <button id="stopwatchstart">START</button>
+                <button id="stopwatchstop">STOP</button>
+                <button id="stopwatchreset">RESET</button>
+                <button id="lap">LAP</button>
+            </div>
+            <div id="lapstext"></div>
+            <div class="lapTimeContainer">
+                <div id="laptimestore"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+    <script src="timer.js"></script>
+    <script src="stopwatch.js"></script>
+    <script src="switch.js"></script>
+</body>
+</html>
